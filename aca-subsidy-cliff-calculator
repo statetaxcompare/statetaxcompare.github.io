@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACA Subsidy Cliff Calculator 2026 | Early Retirement Health Insurance</title>
+<meta name="description" content="Free 2026 ACA subsidy cliff calculator for early retirees. See exactly how much your health insurance subsidy drops as your MAGI crosses the 400% FPL cliff.">
+
+<!-- Monetag -->
+<script src="https://quge5.com/88/tag.min.js" data-zone="240376" async data-cfasync="false"></script>
+<!-- Adsterra -->
+<script src="https://pl30581656.effectivecpmnetwork.com/92/fe/cb/92fecbcfea16f0cda71200198588eea9.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ACA Subsidy Cliff Calculator 2026",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f4efe6;
+    color: #1f2937;
+    line-height: 1.5;
+  }
+  .hero {
+    background: linear-gradient(120deg, #7f1d1d 0%, #6b21a8 55%, #1e3a8a 100%);
+    padding: 50px 20px 40px;
+    text-align: center;
+    color: #fff;
+  }
+  .hero h1 { font-size: 1.9rem; margin-bottom: 10px; }
+  .hero p { color: #f1e9d8; max-width: 600px; margin: 0 auto; font-family: -apple-system, sans-serif; font-size: 0.95rem; }
+  .status-banner {
+    background: #3f2d1c; color: #fde7c7; padding: 12px 16px;
+    text-align: center; font-size: 0.85rem; font-family: -apple-system, sans-serif;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+  .card {
+    background: #fffdf9; border-radius: 14px; padding: 22px;
+    margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-left: 6px solid #6b21a8;
+  }
+  label { display: block; font-family: -apple-system, sans-serif; font-size: 0.85rem; color: #6b7280; margin-bottom: 6px; margin-top: 14px; }
+  input[type=range] { width: 100%; }
+  input[type=number], select {
+    width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #d6cdbb;
+    background: #fff; color: #1f2937; font-size: 1rem; font-family: -apple-system, sans-serif;
+  }
+  .value-display { font-size: 1.3rem; font-weight: 700; color: #6b21a8; }
+
+  .cliff-bar-wrap { margin-top: 20px; background: #ece3d2; border-radius: 10px; height: 26px; overflow: hidden; }
+  .cliff-bar-fill { height: 100%; background: linear-gradient(90deg,#16a34a,#eab308,#b91c1c); transition: width 0.3s; }
+
+  .compare-grid { display: flex; gap: 14px; margin-top: 20px; }
+  .compare-card {
+    flex: 1; background: #fff; border-radius: 12px; padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .compare-card.dentro { border-left: 6px solid #16a34a; }
+  .compare-card.fora { border-left: 6px solid #b91c1c; }
+  .compare-card h4 { font-size: 1rem; margin-bottom: 8px; }
+  .compare-card .big { font-size: 1.6rem; font-weight: 800; }
+  .compare-card.dim { opacity: 0.35; transform: scale(0.97); }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.85rem; font-family: -apple-system, sans-serif; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ece3d2; }
+  th { color: #6b7280; font-weight: 600; }
+  .footnote { font-size: 0.75rem; color: #9ca3af; margin-top: 30px; text-align: center; font-family: -apple-system, sans-serif; }
+  .ad-slot { text-align: center; margin: 24px 0; min-height: 90px; }
+  h3 { font-family: Georgia, serif; }
+</style>
+</head>
+<body>
+
+<div class="status-banner" id="statusBanner">
+  Última atualização: <span id="updateDate">29 Julho 2026</span> — O Senado ainda não votou a extensão dos subsídios melhorados do ACA. Este calculador usa a estrutura original (pré-2021), em vigor para 2026.
+</div>
+
+<div class="hero">
+  <h1>🏥 O Penhasco do Subsídio ACA</h1>
+  <p>Descobre exatamente quanto perdes de subsídio de saúde ao cruzar a linha dos 400% do nível de pobreza federal — antes de decidires o teu levantamento na reforma.</p>
+</div>
+
+<div class="container">
+
+  <div class="ad-slot" id="adSlotTop"></div>
+
+  <div class="card">
+    <label>Tamanho do agregado familiar</label>
+    <select id="householdSize">
+      <option value="1">1 pessoa</option>
+      <option value="2" selected>2 pessoas (casal)</option>
+      <option value="3">3 pessoas</option>
+      <option value="4">4 pessoas</option>
+    </select>
+
+    <label>Idade do membro mais velho</label>
+    <input type="number" id="age" value="60" min="50" max="64">
+
+    <label>Prémio anual estimado (plano Silver) — usa o valor real do HealthCare.gov se o tiveres</label>
+    <input type="number" id="premium" value="14000">
+
+    <label>O teu MAGI anual projetado (levantamentos de reforma + outros rendimentos): <span class="value-display" id="magiValue">$60,000</span></label>
+    <input type="range" id="magiSlider" min="10000" max="150000" step="1000" value="60000">
+
+    <div class="cliff-bar-wrap">
+      <div class="cliff-bar-fill" id="cliffBar" style="width:40%"></div>
+    </div>
+    <div id="fplPercent" style="text-align:center; margin-top:8px; font-family:-apple-system,sans-serif; color:#6b7280; font-size:0.9rem;">269% do nível de pobreza federal</div>
+
+    <div class="compare-grid">
+      <div class="compare-card dentro" id="cardDentro">
+        <h4>✅ Dentro do limite</h4>
+        <div class="big" id="subsidyDentro">$9,800</div>
+        <div style="font-family:-apple-system,sans-serif; font-size:0.8rem; color:#6b7280;">subsídio/ano</div>
+      </div>
+      <div class="compare-card fora" id="cardFora">
+        <h4>🔻 Acima do penhasco</h4>
+        <div class="big" id="subsidyFora">$0</div>
+        <div style="font-family:-apple-system,sans-serif; font-size:0.8rem; color:#6b7280;">subsídio/ano</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot" id="adSlotMid"></div>
+
+  <div class="card" style="border-left-color:#1e3a8a;">
+    <h3 style="margin-bottom:10px;">🗺️ Como o teu estado muda esta conta</h3>
+    <p style="font-size:0.85rem; color:#6b7280; margin-bottom:10px; font-family:-apple-system,sans-serif;">Levantamentos Roth não contam para o MAGI. Levantamentos de IRA/401(k) tradicionais contam. O tratamento fiscal do teu estado muda quanto precisas de levantar — o que muda o teu MAGI e o teu subsídio.</p>
+    <table>
+      <tr><th>Estado</th><th>Taxa levantamentos IRA/401k?</th><th>Taxa Seg. Social?</th></tr>
+      <tr><td>Flórida 🌴</td><td>Não</td><td>Não</td></tr>
+      <tr><td>Texas 🤠</td><td>Não</td><td>Não</td></tr>
+      <tr><td>Pensilvânia</td><td>Não</td><td>Não</td></tr>
+      <tr><td>Illinois</td><td>Não</td><td>Não</td></tr>
+      <tr><td>Califórnia</td><td>Sim, total</td><td>Não</td></tr>
+      <tr><td>Nova Iorque</td><td>Sim (parcial)</td><td>Não</td></tr>
+    </table>
+  </div>
+
+  <div class="ad-slot" id="adSlotBottom"></div>
+
+  <p class="footnote">
+    Estimativas apenas, com base nas diretrizes federais de pobreza de 2025 (usadas para a cobertura de 2026). Prémios e subsídios reais variam por estado, condado e seguradora. Confirma os teus números exatos em HealthCare.gov. Isto não é aconselhamento fiscal, legal ou financeiro.
+  </p>
+</div>
+
+<script>
+  const FPL_BASE = 15650;
+  const FPL_PER_PERSON = 5500;
+
+  function getFPL(size) {
+    return FPL_BASE + FPL_PER_PERSON * (size - 1);
+  }
+
+  function applicablePercent(fplPct) {
+    if (fplPct <= 150) return 0.021;
+    if (fplPct <= 200) return 0.021 + (fplPct - 150) * (0.0636 - 0.021) / 50;
+    if (fplPct <= 250) return 0.0636 + (fplPct - 200) * (0.0813 - 0.0636) / 50;
+    if (fplPct <= 300) return 0.0813 + (fplPct - 250) * (0.0955 - 0.0813) / 50;
+    if (fplPct <= 400) return 0.0955 + (fplPct - 300) * (0.0996 - 0.0955) / 100;
+    return null;
+  }
+
+  function update() {
+    const size = parseInt(document.getElementById('householdSize').value);
+    const magi = parseInt(document.getElementById('magiSlider').value);
+    const premium = parseInt(document.getElementById('premium').value);
+
+    document.getElementById('magiValue').textContent = '$' + magi.toLocaleString();
+
+    const fpl = getFPL(size);
+    const fplPct = (magi / fpl) * 100;
+    document.getElementById('fplPercent').textContent = Math.round(fplPct) + '% do nível de pobreza federal';
+
+    const barPct = Math.min((fplPct / 500) * 100, 100);
+    document.getElementById('cliffBar').style.width = barPct + '%';
+
+    const pct = applicablePercent(fplPct);
+    const cardDentro = document.getElementById('cardDentro');
+    const cardFora = document.getElementById('cardFora');
+
+    if (pct === null) {
+      document.getElementById('subsidyDentro').textContent = '—';
+      document.getElementById('subsidyFora').textContent = '$0 (perdeste $' + Math.round(premium).toLocaleString() + ')';
+      cardDentro.classList.add('dim');
+      cardFora.classList.remove('dim');
+    } else {
+      const requiredContribution = magi * pct;
+      const subsidy = Math.max(premium - requiredContribution, 0);
+      document.getElementById('subsidyDentro').textContent = '$' + Math.round(subsidy).toLocaleString();
+      document.getElementById('subsidyFora').textContent = '$0';
+      cardFora.classList.add('dim');
+      cardDentro.classList.remove('dim');
+    }
+  }
+
+  document.getElementById('magiSlider').addEventListener('input', update);
+  document.getElementById('householdSize').addEventListener('change', update);
+  document.getElementById('premium').addEventListener('input', update);
+  document.getElementById('age').addEventListener('input', update);
+
+  update();
+</script>
+
+</body>
+</html>
