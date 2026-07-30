@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada Province Tax & Cost Compare — All Provinces 2026</title>
+<meta name="description" content="Compare taxes and cost of living between any two Canadian provinces. Free tool with provincial income tax, sales tax, gas prices, and cost of living data for 2026.">
+
+<!-- Monetag -->
+<script src="https://quge5.com/88/tag.min.js" data-zone="240376" async data-cfasync="false"></script>
+<!-- Adsterra -->
+<script src="https://pl30581656.effectivecpmnetwork.com/92/fe/cb/92fecbcfea16f0cda71200198588eea9.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Canada Province Tax & Cost Compare",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #f4efe6; color: #1f2937; line-height: 1.5; }
+  .hero { background: linear-gradient(120deg, #7f1d1d 0%, #6b21a8 55%, #1e3a8a 100%); padding: 50px 20px 40px; text-align: center; color: #fff; }
+  .stars { color: #facc15; font-size: 1.1rem; margin-bottom: 12px; }
+  .hero h1 { font-size: 1.9rem; margin-bottom: 10px; }
+  .hero p { color: #f1e9d8; max-width: 600px; margin: 0 auto; font-family: -apple-system, sans-serif; font-size: 0.95rem; }
+  .container { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
+  .card { background: #fffdf9; border-radius: 14px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 6px solid #6b21a8; }
+  label { display: block; font-family: -apple-system, sans-serif; font-size: 0.85rem; color: #6b7280; margin-bottom: 6px; margin-top: 16px; }
+  select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #d6cdbb; background: #fff; color: #1f2937; font-size: 1rem; font-family: -apple-system, sans-serif; }
+  button { width: 100%; margin-top: 22px; padding: 14px; border: none; border-radius: 10px; background: #6b21a8; color: #fff; font-size: 1.05rem; font-weight: 700; font-family: -apple-system, sans-serif; cursor: pointer; }
+  button:active { background: #581c87; }
+  .ad-slot { text-align: center; margin: 24px 0; min-height: 90px; }
+  .footer { text-align: center; font-size: 0.75rem; color: #9ca3af; margin-top: 30px; font-family: -apple-system, sans-serif; }
+
+  #resultSection { display: none; margin-top: 24px; }
+  .province-card { background: #fffdf9; border-radius: 14px; padding: 22px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  .province-card.left { border-left: 6px solid #b91c1c; }
+  .province-card.right { border-left: 6px solid #1e3a8a; }
+  .province-card h2 { font-size: 1.6rem; margin-bottom: 16px; }
+  .stat-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #ece3d2; font-family: -apple-system, sans-serif; }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-label { color: #4b5563; font-size: 0.95rem; }
+  .stat-value { font-weight: 700; font-size: 0.95rem; }
+  .left .stat-value { color: #b91c1c; }
+  .right .stat-value { color: #1e3a8a; }
+  .savings-banner { background: #1e3a8a; color: #fff; border-radius: 14px; padding: 26px; text-align: center; }
+  .savings-banner .label { font-family: -apple-system, sans-serif; letter-spacing: 1px; font-size: 0.85rem; text-transform: uppercase; opacity: 0.85; }
+  .savings-banner .amount { font-size: 2.6rem; font-weight: 800; margin: 8px 0; }
+  .savings-banner .sub { font-family: -apple-system, sans-serif; font-size: 0.85rem; opacity: 0.85; }
+  .footnote { font-size: 0.75rem; color: #9ca3af; margin-top: 30px; text-align: center; font-family: -apple-system, sans-serif; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="stars">★ ★ ★ ★ ★</div>
+  <h1>🇨🇦 Canada Province Tax & Cost Compare</h1>
+  <p>Compare taxes & cost of living between any two provinces — All 10 Provinces</p>
+</div>
+
+<div class="container">
+  <div class="ad-slot" id="adSlotTop"></div>
+
+  <div class="card">
+    <label>📍 Moving From</label>
+    <select id="fromProvince">
+      <option value="alberta">Alberta</option>
+      <option value="british-columbia">British Columbia</option>
+      <option value="manitoba">Manitoba</option>
+      <option value="new-brunswick">New Brunswick</option>
+      <option value="newfoundland-labrador">Newfoundland and Labrador</option>
+      <option value="nova-scotia">Nova Scotia</option>
+      <option value="ontario" selected>Ontario</option>
+      <option value="prince-edward-island">Prince Edward Island</option>
+      <option value="quebec">Quebec</option>
+      <option value="saskatchewan">Saskatchewan</option>
+    </select>
+
+    <label>🏠 Moving To</label>
+    <select id="toProvince">
+      <option value="alberta" selected>Alberta</option>
+      <option value="british-columbia">British Columbia</option>
+      <option value="manitoba">Manitoba</option>
+      <option value="new-brunswick">New Brunswick</option>
+      <option value="newfoundland-labrador">Newfoundland and Labrador</option>
+      <option value="nova-scotia">Nova Scotia</option>
+      <option value="ontario">Ontario</option>
+      <option value="prince-edward-island">Prince Edward Island</option>
+      <option value="quebec">Quebec</option>
+      <option value="saskatchewan">Saskatchewan</option>
+    </select>
+
+    <button onclick="compareProvinces()">⚡ Compare Provinces Now</button>
+  </div>
+
+  <div id="resultSection">
+    <div class="ad-slot" id="adSlotMid"></div>
+    <div id="cardsContainer"></div>
+  </div>
+
+  <div class="ad-slot" id="adSlotBottom"></div>
+
+  <p class="footnote">
+    Figures are approximate estimates based on 2026 published provincial tax rates and general cost-of-living data. Actual costs vary by city, income, and personal circumstances. This is not tax or financial advice — consult a qualified Canadian tax professional.
+  </p>
+
+  <div class="footer">© 2026 Canada Province Tax Compare | Sources: CRA, Statistics Canada</div>
+</div>
+
+<script>
+  const PROVINCES = {
+    "alberta": { name: "Alberta", emoji: "🏔️", topMarginalRate: "48%", incomeTax: "10% flat (up to $148,269)", salesTax: "5% (GST only)", medianRent: 1800, gasPerLiter: 1.40, estMonthlyCost: 2950 },
+    "british-columbia": { name: "British Columbia", emoji: "🌊", topMarginalRate: "53.5%", incomeTax: "5.06%–20.5% (progressive)", salesTax: "12% (GST + PST)", medianRent: 2600, gasPerLiter: 1.75, estMonthlyCost: 3900 },
+    "manitoba": { name: "Manitoba", emoji: "🌾", topMarginalRate: "50.4%", incomeTax: "10.8%–17.4% (progressive)", salesTax: "12% (GST + PST)", medianRent: 1400, gasPerLiter: 1.50, estMonthlyCost: 2350 },
+    "new-brunswick": { name: "New Brunswick", emoji: "🦞", topMarginalRate: "52.5%", incomeTax: "9.4%–19.5% (progressive)", salesTax: "15% (HST)", medianRent: 1300, gasPerLiter: 1.55, estMonthlyCost: 2200 },
+    "newfoundland-labrador": { name: "Newfoundland and Labrador", emoji: "⚓", topMarginalRate: "54.8%", incomeTax: "8.7%–21.8% (progressive)", salesTax: "15% (HST)", medianRent: 1400, gasPerLiter: 1.65, estMonthlyCost: 2300 },
+    "nova-scotia": { name: "Nova Scotia", emoji: "⛵", topMarginalRate: "54%", incomeTax: "8.79%–21% (progressive)", salesTax: "15% (HST)", medianRent: 1700, gasPerLiter: 1.60, estMonthlyCost: 2650 },
+    "ontario": { name: "Ontario", emoji: "🏙️", topMarginalRate: "53.5%", incomeTax: "5.05%–13.16% (progressive)", salesTax: "13% (HST)", medianRent: 2400, gasPerLiter: 1.55, estMonthlyCost: 3650 },
+    "prince-edward-island": { name: "Prince Edward Island", emoji: "🥔", topMarginalRate: "51.4%", incomeTax: "9.65%–19% (progressive)", salesTax: "15% (HST)", medianRent: 1500, gasPerLiter: 1.55, estMonthlyCost: 2400 },
+    "quebec": { name: "Quebec", emoji: "⚜️", topMarginalRate: "53.3%", incomeTax: "14%–25.75% (progressive)", salesTax: "14.975% (GST + QST)", medianRent: 1600, gasPerLiter: 1.60, estMonthlyCost: 2650 },
+    "saskatchewan": { name: "Saskatchewan", emoji: "🌻", topMarginalRate: "47.5%", incomeTax: "10.5%–14.5% (progressive)", salesTax: "11% (GST + PST)", medianRent: 1300, gasPerLiter: 1.45, estMonthlyCost: 2150 }
+  };
+
+  function renderCard(key, side) {
+    const p = PROVINCES[key];
+    return `
+      <div class="province-card ${side}">
+        <h2>${p.emoji} ${p.name}</h2>
+        <div class="stat-row"><span class="stat-label">Provincial Income Tax</span><span class="stat-value">${p.incomeTax}</span></div>
+        <div class="stat-row"><span class="stat-label">Sales Tax</span><span class="stat-value">${p.salesTax}</span></div>
+        <div class="stat-row"><span class="stat-label">Top Combined Marginal Rate</span><span class="stat-value">${p.topMarginalRate}</span></div>
+        <div class="stat-row"><span class="stat-label">Median Rent</span><span class="stat-value">$${p.medianRent.toLocaleString()}/mo</span></div>
+        <div class="stat-row"><span class="stat-label">Gas/Liter</span><span class="stat-value">$${p.gasPerLiter.toFixed(2)}</span></div>
+        <div class="stat-row"><span class="stat-label">Est. Monthly Cost</span><span class="stat-value">$${p.estMonthlyCost.toLocaleString()}</span></div>
+      </div>`;
+  }
+
+  function compareProvinces() {
+    const fromKey = document.getElementById('fromProvince').value;
+    const toKey = document.getElementById('toProvince').value;
+
+    if (fromKey === toKey) { alert('Please select two different provinces.'); return; }
+
+    const from = PROVINCES[fromKey];
+    const to = PROVINCES[toKey];
+
+    let html = renderCard(fromKey, 'left') + renderCard(toKey, 'right');
+
+    const diff = from.estMonthlyCost - to.estMonthlyCost;
+    if (diff !== 0) {
+      const cheaper = diff > 0 ? to : from;
+      const otherName = cheaper === from ? to.name : from.name;
+      const annualSavings = Math.abs(diff) * 12;
+      html += `
+        <div class="savings-banner">
+          <div class="label">🏆 Annual Savings in ${cheaper.name}</div>
+          <div class="amount">$${annualSavings.toLocaleString()}</div>
+          <div class="sub">compared to living in ${otherName}</div>
+        </div>`;
+    }
+
+    document.getElementById('cardsContainer').innerHTML = html;
+    document.getElementById('resultSection').style.display = 'block';
+    document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+                                         </html>
