@@ -1,0 +1,402 @@
+[
+  {
+    "code": "AK",
+    "name": "Alaska",
+    "tax": 0.0,
+    "rent": 1200,
+    "groc": 120,
+    "gas": 4.0
+  },
+  {
+    "code": "AL",
+    "name": "Alabama",
+    "tax": 5.0,
+    "rent": 850,
+    "groc": 88,
+    "gas": 2.78
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas",
+    "tax": 4.9,
+    "rent": 820,
+    "groc": 88,
+    "gas": 2.75
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona",
+    "tax": 2.5,
+    "rent": 1300,
+    "groc": 97,
+    "gas": 3.4
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "tax": 13.3,
+    "rent": 2100,
+    "groc": 115,
+    "gas": 4.8
+  },
+  {
+    "code": "CO",
+    "name": "Colorado",
+    "tax": 4.4,
+    "rent": 1700,
+    "groc": 103,
+    "gas": 3.5
+  },
+  {
+    "code": "CT",
+    "name": "Connecticut",
+    "tax": 6.99,
+    "rent": 1700,
+    "groc": 110,
+    "gas": 3.6
+  },
+  {
+    "code": "DE",
+    "name": "Delaware",
+    "tax": 6.6,
+    "rent": 1350,
+    "groc": 100,
+    "gas": 3.1
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "tax": 0.0,
+    "rent": 1600,
+    "groc": 100,
+    "gas": 3.3
+  },
+  {
+    "code": "GA",
+    "name": "Georgia",
+    "tax": 5.49,
+    "rent": 1250,
+    "groc": 94,
+    "gas": 2.9
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii",
+    "tax": 11.0,
+    "rent": 2400,
+    "groc": 130,
+    "gas": 4.9
+  },
+  {
+    "code": "IA",
+    "name": "Iowa",
+    "tax": 6.0,
+    "rent": 880,
+    "groc": 90,
+    "gas": 2.95
+  },
+  {
+    "code": "ID",
+    "name": "Idaho",
+    "tax": 5.8,
+    "rent": 1150,
+    "groc": 95,
+    "gas": 3.4
+  },
+  {
+    "code": "IL",
+    "name": "Illinois",
+    "tax": 4.95,
+    "rent": 1400,
+    "groc": 99,
+    "gas": 3.7
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "tax": 3.15,
+    "rent": 900,
+    "groc": 89,
+    "gas": 3.0
+  },
+  {
+    "code": "KS",
+    "name": "Kansas",
+    "tax": 5.7,
+    "rent": 900,
+    "groc": 90,
+    "gas": 2.95
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "tax": 4.5,
+    "rent": 880,
+    "groc": 89,
+    "gas": 2.95
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana",
+    "tax": 4.25,
+    "rent": 950,
+    "groc": 90,
+    "gas": 2.9
+  },
+  {
+    "code": "MA",
+    "name": "Massachusetts",
+    "tax": 9.0,
+    "rent": 2200,
+    "groc": 113,
+    "gas": 3.6
+  },
+  {
+    "code": "MD",
+    "name": "Maryland",
+    "tax": 5.75,
+    "rent": 1700,
+    "groc": 108,
+    "gas": 3.4
+  },
+  {
+    "code": "ME",
+    "name": "Maine",
+    "tax": 7.15,
+    "rent": 1150,
+    "groc": 101,
+    "gas": 3.5
+  },
+  {
+    "code": "MI",
+    "name": "Michigan",
+    "tax": 4.05,
+    "rent": 1000,
+    "groc": 93,
+    "gas": 3.1
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota",
+    "tax": 9.85,
+    "rent": 1200,
+    "groc": 98,
+    "gas": 3.2
+  },
+  {
+    "code": "MO",
+    "name": "Missouri",
+    "tax": 4.95,
+    "rent": 950,
+    "groc": 90,
+    "gas": 2.9
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi",
+    "tax": 5.0,
+    "rent": 800,
+    "groc": 87,
+    "gas": 2.7
+  },
+  {
+    "code": "MT",
+    "name": "Montana",
+    "tax": 6.75,
+    "rent": 1050,
+    "groc": 97,
+    "gas": 3.3
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina",
+    "tax": 4.5,
+    "rent": 1200,
+    "groc": 93,
+    "gas": 2.95
+  },
+  {
+    "code": "ND",
+    "name": "North Dakota",
+    "tax": 2.9,
+    "rent": 850,
+    "groc": 93,
+    "gas": 3.0
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska",
+    "tax": 5.84,
+    "rent": 950,
+    "groc": 91,
+    "gas": 3.0
+  },
+  {
+    "code": "NH",
+    "name": "New Hampshire",
+    "tax": 0.0,
+    "rent": 1500,
+    "groc": 105,
+    "gas": 3.4
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey",
+    "tax": 10.75,
+    "rent": 1900,
+    "groc": 112,
+    "gas": 3.3
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico",
+    "tax": 5.9,
+    "rent": 1050,
+    "groc": 95,
+    "gas": 3.2
+  },
+  {
+    "code": "NV",
+    "name": "Nevada",
+    "tax": 0.0,
+    "rent": 1450,
+    "groc": 101,
+    "gas": 3.8
+  },
+  {
+    "code": "NY",
+    "name": "New York",
+    "tax": 10.9,
+    "rent": 2400,
+    "groc": 118,
+    "gas": 3.9
+  },
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "tax": 3.99,
+    "rent": 950,
+    "groc": 91,
+    "gas": 3.0
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma",
+    "tax": 4.75,
+    "rent": 850,
+    "groc": 89,
+    "gas": 2.8
+  },
+  {
+    "code": "OR",
+    "name": "Oregon",
+    "tax": 9.9,
+    "rent": 1500,
+    "groc": 106,
+    "gas": 3.9
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "tax": 3.07,
+    "rent": 1100,
+    "groc": 96,
+    "gas": 3.3
+  },
+  {
+    "code": "RI",
+    "name": "Rhode Island",
+    "tax": 5.99,
+    "rent": 1450,
+    "groc": 107,
+    "gas": 3.55
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina",
+    "tax": 6.4,
+    "rent": 1100,
+    "groc": 91,
+    "gas": 2.88
+  },
+  {
+    "code": "SD",
+    "name": "South Dakota",
+    "tax": 0.0,
+    "rent": 900,
+    "groc": 91,
+    "gas": 3.1
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee",
+    "tax": 0.0,
+    "rent": 1150,
+    "groc": 92,
+    "gas": 2.85
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "tax": 0.0,
+    "rent": 1350,
+    "groc": 96,
+    "gas": 3.1
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "tax": 4.65,
+    "rent": 1400,
+    "groc": 98,
+    "gas": 3.6
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "tax": 5.75,
+    "rent": 1550,
+    "groc": 101,
+    "gas": 3.2
+  },
+  {
+    "code": "VT",
+    "name": "Vermont",
+    "tax": 8.75,
+    "rent": 1200,
+    "groc": 104,
+    "gas": 3.6
+  },
+  {
+    "code": "WA",
+    "name": "Washington",
+    "tax": 0.0,
+    "rent": 1800,
+    "groc": 108,
+    "gas": 4.0
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin",
+    "tax": 7.65,
+    "rent": 1050,
+    "groc": 94,
+    "gas": 3.1
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "tax": 6.5,
+    "rent": 750,
+    "groc": 88,
+    "gas": 3.0
+  },
+  {
+    "code": "WY",
+    "name": "Wyoming",
+    "tax": 0.0,
+    "rent": 950,
+    "groc": 94,
+    "gas": 3.2
+  }
+]
